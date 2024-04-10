@@ -7,9 +7,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
-app.use(express.static('public'));
-app.use(express.static('styles'));
+app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "styles"));
 
 let qrURL = "";
 
@@ -26,7 +27,7 @@ function generateQRCode() {
 }
 
 app.get("/", (req, res) => {
-  res.render("views/index.ejs", { qrURL: qrURL });
+  res.render("index.ejs", { qrURL: qrURL });
 });
 
 app.get("/qr_img.png", (req, res) => {
