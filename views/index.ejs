@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <% if (locals.qrURL) { %>
+        <h2>QR Code:</h2>
+        <img src="/qr_img.png" alt="QR Code">
+        <h2>Input:</h2>
+        <h2><%= qrURL %></h2>
+    <% } else { %>
+        <h2>No input provided yet.</h2>
+    <% } %>
+
+    <form action="/submit" method="post">
+        <label for="URL">Enter Input:</label>
+        <input type="text" id="URL" name="URL">
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>
