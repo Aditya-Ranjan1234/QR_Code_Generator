@@ -16,6 +16,7 @@
   ],
   "routes": [
     { "src": "/(.*\\.[^/]+)$", "dest": "public/$1" },
-    { "src": "/.*", "dest": "index.js" }
+    { "src": "/(.*\\.[^/]+)$", "dest": "views/$1" },
+    { "src": "/.*", "dest": "index.js" },
   ]
 }
