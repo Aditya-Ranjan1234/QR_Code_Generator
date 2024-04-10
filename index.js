@@ -26,7 +26,7 @@ function generateQRCode() {
 }
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { qrURL: qrURL });
+  res.render("views/index.ejs", { qrURL: qrURL });
 });
 
 app.get("/qr_img.png", (req, res) => {
