@@ -7,7 +7,7 @@
     },
     {
       "src": "views/index.ejs",
-      "use": "@now/static"
+      "use": "@vercel/node"
     },
     {
       "src": "public/styles/style.css",
