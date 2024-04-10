@@ -14,9 +14,9 @@
       "use": "@now/static"
     }
   ],
-  "routes": [
-    { "src": "/(.*\\.[^/]+)$", "dest": "public/" },
-    { "src": "/(.*\\.[^/]+)$", "dest": "views/" },
+  "routes": 
+    { "src": "/(.*\\.[^/]+)$", "dest": "public/$" },
+    { "src": "/(.*\\.[^/]+)$", "dest": "views/$" },
     { "src": "/.*", "dest": "index.js" },
   ]
 }
