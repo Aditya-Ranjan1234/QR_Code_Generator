@@ -41,7 +41,7 @@ This is a simple QR Code Generator web application built with Node.js, Express.j
 1. Start the server:
 
    ```bash
-   npm start
+   nodemon index.js
    ```
 
 2. Open your web browser and visit [http://localhost:3000](http://localhost:3000)
