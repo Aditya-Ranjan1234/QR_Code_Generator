@@ -2,6 +2,6 @@
   "routes": [
     { "src": "/qr_img.png", "dest": "/public/qr_img.png" },
     { "src": "/views/(.*)", "dest": "/views/$1" },
-    { "src": "/.*", "dest": "/index.js" }
+    { "src": "/.*", "dest": "/index.cjs" }
   ]
 }
